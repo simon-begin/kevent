@@ -1,0 +1,65 @@
+body {
+  font-family: $font-primary;
+}
+
+%hx {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-family: $font-primary;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.h1,
+h1 {
+  @extend %hx;
+  @include rem(font-size, 32px);
+}
+
+.h2,
+h2 {
+  @extend %hx;
+  @include rem(font-size, 23px);
+}
+
+.h3,
+h3 {
+  @extend %hx;
+  @include rem(font-size, 13px);
+}
+
+.h4,
+h4 {
+  @extend %hx;
+  @include rem(font-size, 20px);
+}
+
+.h5,
+h5 {
+  @extend %hx;
+  @include rem(font-size, 18px);
+}
+
+.h6,
+h6 {
+  @extend %hx;
+  @include rem(font-size, 16px);
+}
+
+strong {
+  display: inline-block;
+  font-weight: 600;
+}

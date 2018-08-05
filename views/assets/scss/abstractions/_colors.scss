@@ -1,0 +1,15 @@
+$colors: (
+  gallery: #f0f0f0,
+  geyser: #dce6e6,
+  java: #22d2d2,
+  outer-space: #2d3535,
+  white: #fff,
+  black: #000
+);
+
+$color-black: map-get($colors, black);
+$color-blue-light: map-get($colors, java);
+$color-gray-dark: map-get($colors, outer-space);
+$color-gray-light: map-get($colors, geyser);
+$color-gray-lighter: map-get($colors, gallery);
+$color-white: map-get($colors, white);

@@ -1,0 +1,55 @@
+{
+  "name": "kevent",
+  "version": "1.0.0",
+  "description": "Kantaloup event display",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config ./bin/www",
+    "dev:api": "nodemon -r dotenv/config ./bin/www",
+    "dev:web": "webpack-dev-server --port 3000 --open --inline --hot --content-base ./views",
+    "build": "webpack --progress --hide-modules",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon-begin/kevent.git"
+  },
+  "author": "Simon Begin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simon-begin/kevent/issues"
+  },
+  "homepage": "https://github.com/simon-begin/kevent#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.18.3",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.2",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.1.0",
+    "sass-mq": "^5.0.0",
+    "sass-rem": "^2.0.1",
+    "vue-loader": "^15.2.6",
+    "vue-style-loader": "^4.1.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

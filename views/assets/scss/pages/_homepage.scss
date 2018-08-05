@@ -1,0 +1,110 @@
+.homepage {
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &__inner {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background: $color-gray-lighter;
+    color: $color-gray-light;
+
+    &--up {
+      background: $color-gray-dark;
+    }
+
+    &--down {
+      top: 50%;
+      background: $color-blue-light;
+
+      & > div {
+        max-width: 900px;
+      }
+    }
+  }
+
+  &__form {
+    width: 75%;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+
+  &__input {
+    font-size: 7vw;
+    line-height: 1;
+    display: inline-block;
+    width: 100%;
+    padding: 0 0 0.1em 0;
+    border: 0;
+    border-bottom: 4px solid;
+    color: inherit;
+    background: transparent;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &::-ms-input-placeholder {
+      opacity: 0.1;
+      color: $color-white;
+    }
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &__help {
+    font-size: 90%;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: right;
+
+    @include rem(padding, 13px 0);
+  }
+
+  &__more {
+    display: flex;
+    width: 75%;
+    max-width: 900px;
+    pointer-events: none;
+  }
+
+  &__sales,
+  &__infos {
+    width: 50%;
+    text-align: left;
+
+    @include rem(padding, 0 16px 0 0);
+  }
+
+  &__infos {
+
+    @include rem(padding, 0 0 0 16px);
+    @include mq($from: 0px, $until: tablet) {
+      display: none;
+    }
+  }
+
+  &__sales {
+
+    @include mq($from: 0px, $until: tablet) {
+      width: 100%;
+    }
+  }
+}

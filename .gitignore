@@ -1,0 +1,7 @@
+node_modules/
+dist/
+/public/build.js
+/public/*.woff
+/public/*.ttf
+/public/*.eot
+/public/*.woff2

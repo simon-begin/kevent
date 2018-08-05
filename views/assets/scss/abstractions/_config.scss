@@ -1,0 +1,17 @@
+$config: (
+  fontsPath: '../../assets/fonts',
+);
+
+$font-path: map-get($config, fontsPath);
+$font-primary: Inconsolata, Courier;
+
+$mq-breakpoints: (
+  mobile: 320px,
+  bigMobile: 590px,
+  tablet: 740px,
+  desktop: 960px,
+  smallWide: 1190px,
+  mediumWide: 1400px,
+  wide: 1920px,
+  widest: 2200px
+);

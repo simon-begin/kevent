@@ -1,0 +1,19 @@
+@each $state, $size in $mq-breakpoints {
+   @include mq($from: #{$state}){
+    .hide--#{$state} {
+      display: none;
+    }
+
+    .show-block--#{$state} {
+      display: block;
+    }
+
+    .show-inline--#{$state} {
+      display: inline;
+    }
+
+    .show-inline-block--#{$state} {
+      display: inline-block;
+    }
+  }
+}
