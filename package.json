@@ -7,7 +7,7 @@
     "start": "node -r dotenv/config ./bin/www",
     "dev:api": "nodemon -r dotenv/config ./bin/www",
     "dev:web": "webpack-dev-server --port 3000 --open --inline --hot --content-base ./views",
-    "build": "webpack --progress --hide-modules",
+    "build": "webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
