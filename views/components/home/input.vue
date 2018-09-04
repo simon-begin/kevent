@@ -7,12 +7,13 @@
 
 <script>
 const io = require('socket.io-client');
+import { API_LOCATION } from "../../config";
 
 export default {
     data() {
         return {
             website: '',
-            socket: io('localhost:8080')
+            socket: io(API_LOCATION)
         }
     },
     methods: {
