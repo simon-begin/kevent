@@ -1,39 +1,62 @@
 .homepage {
-  text-align: center;
-  position: relative;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  overflow: hidden;
+  background-color: $color-blue-light;
 
-  &__inner {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50%;
-    background: $color-gray-lighter;
+  &__form {
     color: $color-gray-light;
+    background: $color-gray-dark;
+    padding: 0 10%;
+    position: absolute;
+    height: 200px;
+    top: calc(50% - 175px);
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 350px;
 
-    &--up {
-      background: $color-gray-dark;
-    }
+    &__cancel {
+      text-align: right;
+      color: white;
+      font-size: 30px;
 
-    &--down {
-      top: 50%;
-      background: $color-blue-light;
-
-      & > div {
-        max-width: 900px;
+      &:hover {
+        cursor: pointer;
       }
     }
   }
 
-  &__form {
-    width: 75%;
-    margin: 0 auto;
-    max-width: 900px;
+  &__arrow {
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: -20px;
+    width: 60px;
+    background-color: white;
+    border: 3px solid $color-gray-dark;
+    border-radius: 0 50% 50% 0;
+    color: black;
+    text-align: right;
+    line-height: 60px;
+    padding-right: 10px;
+    box-sizing: border-box;
+
+    &:hover {
+      box-shadow: 0 0 10px white;
+      cursor: pointer;
+    }
   }
 
+  &__iframe {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+}
+
+.form {
   &__input {
     font-size: 7vw;
     line-height: 1;
@@ -78,33 +101,20 @@
     @include rem(padding, 13px 0);
   }
 
-  &__more {
-    display: flex;
-    width: 75%;
-    max-width: 900px;
-    pointer-events: none;
-  }
+  &__button {
+    display: inline-block;
+    background-color: $color-gray-light;
+    color: $color-gray-dark;
+    border: 3px solid $color-gray-dark;
+    min-width: 100px;
+    padding: 10px;
+    margin-left: auto;
+    font-size: 25px;
+    text-transform: uppercase;
 
-  &__sales,
-  &__infos {
-    width: 50%;
-    text-align: left;
-
-    @include rem(padding, 0 16px 0 0);
-  }
-
-  &__infos {
-
-    @include rem(padding, 0 0 0 16px);
-    @include mq($from: 0px, $until: tablet) {
-      display: none;
-    }
-  }
-
-  &__sales {
-
-    @include mq($from: 0px, $until: tablet) {
-      width: 100%;
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color-gray-light, 5);
     }
   }
 }
